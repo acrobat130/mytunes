@@ -26,7 +26,7 @@ var AppModel = Backbone.Model.extend({
       this.get('songQueue').add(song);
     }, this);
 
-    // gets songQueue property to listen for the stop event triggered by html audio tag
+    // gets songQueue property to listen for the stop event triggered by SongQueue.js
     // sets currentSong to nothing to make song stop playing
     this.get('songQueue').on('stop', function(){
       this.set('currentSong', null);
