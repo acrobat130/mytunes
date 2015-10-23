@@ -14,11 +14,10 @@ var SongQueue = Songs.extend({
   },
 
   dequeue: function(song){
-    // this.shift();
     if (this.at(0) === song) {
       this.playNext();
     } else {
-      this.remove(song);
+      this.shift();
     }
   },
 
